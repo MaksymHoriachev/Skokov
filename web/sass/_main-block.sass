@@ -1,0 +1,101 @@
+.content-section
+  background-color: #f6f6f6
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  padding-top: 80px
+  .main
+    flex-basis: 70%
+    .blog-content
+      display: flex
+      flex-wrap: wrap
+      .blog-post
+        position: relative
+        flex-basis: 48%
+        margin-right: 2%
+        margin-bottom: 22px
+        img
+          max-width: 100%
+        .blog-content-footer
+          position: relative
+          padding: 25px
+          background-color: #ffeb00
+          &::before
+            position: absolute
+            content: ""
+            width: 40px
+            height: 40px
+            top: -40px
+            right: 50px
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            border-bottom: 20px solid #ffeb00
+          h4
+            font: bold 23px "Century Gothic"
+            margin-bottom: 25px
+          p
+            color: #5e5e5e
+            font: bold 14px/20px "Century Gothic"
+            margin-bottom: 25px
+          .blog-captions
+            display: flex
+            justify-content: space-between
+            align-items: center
+            span
+              position: relative
+              margin-left: 20px
+              color: #5e5e5e
+              font: bold 12px "Century Gothic"
+              &::before
+                position: absolute
+                content: ""
+                top: 50%
+                transform: translateY(-50%)
+                left: -20px
+                width: 13px
+                height: 10px
+                background: url(../img/heart-icon.png) no-repeat
+            ul
+              position: relative
+              display: flex
+              color: #000000
+              font: bold 12px "Century Gothic"
+              li
+                margin-left: 20px
+                position: relative
+                &::before
+                  position: absolute
+                  content: "/"
+                  left: -10px
+                  top: 50%
+                  transform: translateY(-50%)
+                  font: bold 12px "Century Gothic"
+                &:first-child
+                  &::before
+                    display: none
+    .blog-pagination
+      padding-top: 60px
+      padding-bottom: 60px
+      ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        li
+          margin: 0 2px
+          a
+            display: inline-block
+            padding: 10px 15px
+            text-transform: uppercase
+            font: bold 20px "Century Gothic"
+            color: #414146
+          &:hover
+            background-color: #ffeb00
+        li.active
+          a
+            background-color: #ffeb00
+        .prev
+          margin-left: 0
+          margin-right: auto
+        .next
+          margin-left: auto
+          margin-right: 0

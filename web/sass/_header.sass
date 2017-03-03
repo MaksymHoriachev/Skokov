@@ -1,0 +1,48 @@
+.wrapper
+  padding: 15px
+  .header-top
+    background-color: #f6f6f6
+    .container
+      .row
+        display: flex
+        align-items: center
+        height: 160px
+        .header-logo
+          .link-logo
+            img
+              max-width: 200px
+              max-height: 200px
+        .header-navigation
+          .list-navigation
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            li
+              font: bold 16px "Century Gothic"
+              a
+                display: inline-block
+                padding: 30px 10px
+                color: #000000
+            a.active, a:hover
+              background-color: #ffeb00
+  .header-bottom
+    position: relative
+    overflow: hidden
+    img
+      position: absolute
+      min-width: 100%
+      min-height: 100%
+      left: 50%
+      transform: translateX(-50%)
+    .container
+      .row
+        .col
+          height: 160px
+          display: flex
+          align-items: center
+          .header-blog
+            display: inline-block
+            padding: 20px 200px 20px 20px
+            color: #ffeb00
+            font: normal 35px "Century Gothic"
+            background-color: #424146
