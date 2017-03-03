@@ -2,146 +2,157 @@
 @import "default"
 @import "header"
 @import "main-block"
+@import "sidebar"
 
-.sidebar
-  flex-basis: 30%
-  .sidebar-search
-    background-color: #403f46
-    padding: 20px 50px
-    margin-bottom: 30px
-    form
-      position: relative
-      input
-        width: 100%
-        border: none
-        border-radius: 20px
-        padding: 5px 60px 5px 20px
-        background-color: #f6f6f6
-        font: normal 18px/18px "Century Gothic"
-        color: #403f46
-        outline: none
-      button
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
-        right: 25px
-        width: 23px
-        height: 22px
-        background: url(../img/search-icon.png) no-repeat
-        border: none
-        cursor: pointer
-  .sidebar-content
-    li
-      background-color: #403f46
-      padding: 35px 35px 50px 35px
-      margin-bottom: 30px
-    .sidebar-category, .sidebar-archive
-      h4
-        font: bold 20px "Century Gothic"
-        text-transform: uppercase
-        color: #ffea00
-        margin-bottom: 35px
-      ul
-        display: flex
-        flex-wrap: wrap
-        .sidebar-category-list, .sidebar-archive-list
-          position: relative
-          flex-basis: 48%
-          padding: 0 0 0 45px
-          font: bold 16px "Century Gothic"
-          text-transform: uppercase
-          margin: 15px 0
-          &::before
+
+.footer-top
+  padding-top: 30px
+  padding-bottom: 30px
+  background-color: #3f3f44
+  .container
+    .row
+      .footer-about
+        h4
+          color: #ffffff
+          font: normal 18px/32px "Century Gothic"
+          margin-bottom: 30px
+        p
+          color: #ffffff
+          font: bold 13px/20px "Century Gothic"
+          margin-bottom: 30px
+        button
+          background-color: #000
+          padding: 15px 20px
+          border: none
+          border-bottom: 2px solid #ffeb00
+          color: #ffffff
+          font: normal 15px/16px "Century Gothic"
+          outline: none
+          cursor: pointer
+          letter-spacing: 1px
+          margin-bottom: 50px
+        .footer-stream
+          display: flex
+          flex-wrap: wrap
+          li
+            flex-basis: 32%
+            margin-right: 3px
+            margin-bottom: 3px
+            img
+              min-width: 100%
+              max-width: 100%
+      .footer-tweets
+        h4
+          color: #ffffff
+          font: normal 18px/32px "Century Gothic"
+          margin-bottom: 30px
+        .footer-tweets-list
+          margin-bottom: 40px
+          li
+            position: relative
+            margin-left: 45px
+            color: #ffffff
+            font: bold 13px/16px "Century Gothic"
+            margin-bottom: 15px
+            &::before
+              position: absolute
+              content: ""
+              width: 26px
+              height: 22px
+              top: 10%
+              left: -45px
+              background: url(../img/twitter-birs-icon.png) no-repeat
+            span
+              color: #ffeb00
+            a
+              display: block
+              color: #ffffff
+            .footer-tweets-list-days
+              font: bold 8px/10px "Century Gothic"
+        .footer-social-header
+          display: inline-block
+          margin-bottom: 0
+        .footer-social-list
+          display: inline-block
+          li
+            display: inline-block
+            margin-bottom: 3px
+      .footer-info
+        h4
+          color: #ffffff
+          font: normal 18px/32px "Century Gothic"
+          margin-bottom: 20px
+          &:first-child
+            margin-bottom: 60px
+        .footer-info-list
+          margin-bottom: 60px
+          li
+            position: relative
+            margin-left: 45px
+            margin-bottom: 25px
+            color: #ffffff
+            font: bold 13px/21px "Century Gothic"
+          .phone
+            p
+              margin: 0
+              span
+                color: transparent
+          .e-mail
+            font: bold 13px/21px "Century Gothic"
+            color: #ffffff
+            a
+              color: #ffeb00
+          .address::before, .phone::before, .e-mail::before
             position: absolute
-            content: ''
+            content: ""
+            top: 0
+            left: -45px
             width: 30px
             height: 30px
-            top: 50%
-            transform: translateY(-50%)
-            left: 0
-            background-color: #ffea00
-          &::after
+          .address::before
+            background: url(../img/adress.png) no-repeat
+          .phone::before
+            background: url(../img/phone.png) no-repeat
+          .e-mail::before
+            background: url(../img/email.png) no-repeat
+        p
+          color: #ffffff
+          font: bold 13px/20px "Century Gothic"
+          margin-bottom: 20px
+        .form-text-box
+          position: relative
+          input
+            width: 80%
+            padding: 3px
+            border: none
+            border-bottom: 2px solid #ffeb00
+            background-color: transparent
+            color: #ffffff
+            font: bold 12px/20px "Century Gothic"
+            outline: none
+          button
             position: absolute
-            content: '>'
-            font: bold 24px/24px "Century Gothic"
-            top: 50%
-            transform: translateY(-50%)
-            left: 8px
-            color: #403f46
-          a
-            color: #fff
-    .sidebar-popular-post
-      h4
-        font: bold 20px "Century Gothic"
-        text-transform: uppercase
-        color: #ffea00
-        margin-bottom: 35px
-      ul
-        .sidebar-popular-post-list
-          padding: 0
-          margin-bottom: 25px
-          overflow: hidden
-          &:last-child
-            margin-bottom: 0
-          img
-            max-width: 100px
-            float: left
-          p
-            font: bold 16px/20px "Century Gothic"
-            text-transform: uppercase
-            margin: 0 0 15px 110px
-            a
-              color: #ffffff
-          .sidebar-popular-post-caption
-            margin: 0 0 0 110px
-            display: flex
-            justify-content: flex-end
-            li
-              position: relative
-              color: #ffea00
-              font: bold 12px/20px "Century Gothic"
-              margin-left: 30px
-              margin-bottom: 0
-              padding: 0
-              &:first-child
-                &::before
-                  display: none
-              &::before
-                position: absolute
-                content: ""
-                width: 13px
-                height: 10px
-                top: 50%
-                transform: translateY(-50%)
-                right: 20px
-                background: url(../img/heart-icon-yellow.png) no-repeat
-    .sidebar-tags
-      h4
-        font: bold 20px "Century Gothic"
-        text-transform: uppercase
-        color: #ffea00
-        margin-bottom: 35px
-      ul
-        .sidebar-tags-list
-          padding: 0
-          display: inline-block
-          margin-bottom: 4px
-          a
-            display: inline-block
-            padding: 6px 10px
-            background-color: #ffea00
-            color: #403f46
-            font: bold 16px/16px "Century Gothic"
-            text-transform: uppercase
+            top: 0
+            border: none
+            outline: none
+            width: 28px
+            height: 28px
+            background: url(../img/email-icon.png) no-repeat
+            cursor: pointer
+.footer-bottom
+  padding-top: 30px
+  padding-bottom: 30px
+  background-color: #000000
 
+.footer-copyright
+  color: #ffffff
+  font:  bold 14px "Century Gothic"
 
-
-
-
-
-
-
-
-
-
-
+.footer-nav
+  display: flex
+  justify-content: space-between
+  li
+    a
+      color: #ffffff
+      font: normal 16px "Century Gothic"
+      text-transform: uppercase
